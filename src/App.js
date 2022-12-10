@@ -1,25 +1,32 @@
-import logo from './logo.svg';
-import './App.css';
-
-function App() {
+import React,{useState} from 'react'
+import Index from './views/Process/Index'
+import HomeW from './views/Home/HomeW'
+ 
+const Home = () => <h1>Home Page</h1>
+const Users = () => <h1>Users</h1>
+const App = ()=>{
+  const[page,setPage] = useState(()=>{
+    const {pathname}= window.location
+    const page = pathname.slice(1)
+    return page
+  });
+  const getContent = () =>{
+    if (page === 'users'){
+      return <Index/>
+    }else {
+      return <HomeW/>
+    }
+  }
+  const toPage = page => event =>{
+    event.preventDefault()
+    window.history.pushState(null, '', `/${page}`)
+    setPage(page)
+  }
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <div>
+      
+      {getContent()}</div>
+  )
 }
 
 export default App;

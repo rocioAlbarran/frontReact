@@ -1,0 +1,73 @@
+.App{
+  text-align: center;
+}
+.container {
+    display: flex;
+    flex-direction: column;
+    font-family: "Calibri";
+    justify-content: center;
+ 
+  }
+  
+  table {
+    align-content: center;
+    text-align: center;
+    border-spacing: 0;
+    border: 10px solid #d1cccc;
+    margin: auto;
+    margin-top: 100px;
+    width: 80%;
+	  height: 90%;
+    align-content: center;
+    vertical-align: middle;
+    
+  }
+  .celdas{
+    text-align:center;
+  }
+  tr:last-child td {
+    border-bottom: 0;
+  }
+  
+  th,
+  td {
+    margin: 0;
+    padding: 0.5rem;
+    border-bottom: 1px solid #d1cccc;
+    border-right: 1px solid #d1cccc;
+    text-align: center;
+
+  }
+  
+  th:last-child,
+  td:last-child {
+    border-right: 0;
+  }
+  
+  tr:nth-child(odd) {
+    background: #f3f3f3;
+    color: #000000;
+  }
+  
+  tr:nth-child(even) {
+    background: #ffffff;
+    color: #000000;
+  }
+  
+  .pagination {
+    margin-top: 1.5rem;
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .page-controller {
+    width: 20px;
+    height: 17px;
+    display: flex;
+  }
+  
+  select {
+    border: 1px solid #d1cccc;
+    border-radius: 0.2rem;
+  }
+  
